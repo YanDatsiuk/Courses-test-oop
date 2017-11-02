@@ -2,8 +2,8 @@
 
 namespace YanDatsyuk\Courses\Concerns;
 
-use http\Exception;
 use YanDatsyuk\Courses\Core\RateType;
+use YanDatsyuk\Courses\Exceptions\IncorrectDurationValueException;
 use YanDatsyuk\Courses\Exceptions\IncorrectPriceValueException;
 use YanDatsyuk\Courses\Exceptions\UnknownRateTypeException;
 
@@ -60,11 +60,15 @@ trait IsLesson
 
     private function _calculatePriceForFixedRate(): float
     {
+        //validate price todo
+
         return $this->price;
     }
 
     private function _calculatePriceForHourlyRate(): float
     {
+        //validate price and duration todo
+
         return $this->price * $this->duration;
     }
 
@@ -99,13 +103,13 @@ trait IsLesson
 
     /**
      * @param $duration
-     * @throws IncorrectPriceValueException
+     * @throws IncorrectDurationValueException
      */
     public function setDuration($duration)
     {
         //duration validation
         if ($duration < 0) {
-            throw new IncorrectPriceValueException();
+            throw new IncorrectDurationValueException();
         }
 
         $this->duration = $duration;

@@ -6,10 +6,5 @@
             "email": "yanek2357111317232931@gmail.com"
         }
     ],
-    "require": {},
-    "autoload": {
-        "psr-4": {
-            "YanDatsyuk\\Courses\\": "src/"
-        }
-    }
+    "require": {}
 }
