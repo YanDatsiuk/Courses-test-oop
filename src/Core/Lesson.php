@@ -10,6 +10,20 @@ abstract class Lesson implements ILesson
     use IsLesson;
 
     /**
+     * Lesson constructor.
+     *
+     * @param int $price
+     * @param int $duration
+     * @param string $rateType
+     */
+    public function __construct($price = 0, $duration = 0, $rateType = RateType::FIXED)
+    {
+        $this->setPrice($price);
+        $this->setDuration($duration);
+        $this->setRateType($rateType);
+    }
+
+    /**
      * Add possibility to "setters" methods chaining
      *
      * @param $name
