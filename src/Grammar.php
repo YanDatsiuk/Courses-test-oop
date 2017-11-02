@@ -2,9 +2,9 @@
 
 namespace YanDatsyuk\Courses;
 
-use YanDatsyuk\Courses\Concerns\IsLesson;
+use YanDatsyuk\Courses\Core\Lesson;
 
-class Grammar
+class Grammar extends Lesson
 {
-    use IsLesson;
+
 }

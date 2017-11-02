@@ -58,16 +58,36 @@ trait IsLesson
         }
     }
 
+    /**
+     * @return float
+     * @throws IncorrectPriceValueException
+     */
     private function _calculatePriceForFixedRate(): float
     {
-        //validate price todo
+        //validate price
+        if (is_null($this->price) || ($this->price < 0)) {
+            throw new IncorrectPriceValueException();
+        }
 
         return $this->price;
     }
 
+    /**
+     * @return float
+     * @throws IncorrectDurationValueException
+     * @throws IncorrectPriceValueException
+     */
     private function _calculatePriceForHourlyRate(): float
     {
-        //validate price and duration todo
+        //validate price
+        if (is_null($this->price) || ($this->price < 0)) {
+            throw new IncorrectPriceValueException();
+        }
+
+        //validate duration
+        if (is_null($this->duration) || ($this->duration < 0)) {
+            throw new IncorrectDurationValueException();
+        }
 
         return $this->price * $this->duration;
     }

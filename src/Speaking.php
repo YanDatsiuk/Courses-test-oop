@@ -2,13 +2,9 @@
 
 namespace YanDatsyuk\Courses;
 
-use YanDatsyuk\Courses\Concerns\IsLesson;
+use YanDatsyuk\Courses\Core\Lesson;
 
-/**
- * Class Speaking
- * @package YanDatsyuk\Courses
- */
-class Speaking
+class Speaking extends Lesson
 {
-    use IsLesson;
+
 }
