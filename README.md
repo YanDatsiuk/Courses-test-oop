@@ -1,5 +1,8 @@
 # Lesson
-`$l = new Lesson();`
+```php
+$lesson = new Grammar();
+$lesson->price = 100;
+```
 
 
 # Price calculator
