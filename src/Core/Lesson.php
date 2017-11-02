@@ -24,7 +24,7 @@ abstract class Lesson implements ILesson
     }
 
     /**
-     * Add possibility to "setters" methods chaining
+     * Add possibility to use magic "setters".
      *
      * @param $name
      * @param $value
@@ -32,7 +32,7 @@ abstract class Lesson implements ILesson
      */
     public function __set($name, $value)
     {
-        $methodName = 'set' . ucfirst($value);
+        $methodName = 'set' . ucfirst($name);
         if (method_exists($this, $methodName)) {
             $this->$methodName($value);
             return $this;

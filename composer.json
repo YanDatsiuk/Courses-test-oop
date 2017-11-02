@@ -1,10 +1,12 @@
 {
-    "name": "yandatsyuk/courses-test",
-    "authors": [
-        {
-            "name": "Yan Datsyuk",
-            "email": "yanek2357111317232931@gmail.com"
-        }
-    ],
-    "require": {}
+  "name": "yandatsyuk/courses-test",
+  "authors": [
+    {
+      "name": "Yan Datsyuk",
+      "email": "yanek2357111317232931@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.0.0"
+  }
 }
