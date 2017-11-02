@@ -1,6 +1,6 @@
 <?php
 
-namespace YanDatsyuk\Courses;
+namespace YanDatsyuk\Courses\Examples;
 
 use YanDatsyuk\Courses\Core\Lesson;
 
