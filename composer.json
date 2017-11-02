@@ -1,0 +1,15 @@
+{
+    "name": "yandatsyuk/courses-test",
+    "authors": [
+        {
+            "name": "Yan Datsyuk",
+            "email": "yanek2357111317232931@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "YanDatsyuk\\Courses\\": "src/"
+        }
+    }
+}
