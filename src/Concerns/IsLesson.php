@@ -2,6 +2,7 @@
 
 namespace YanDatsyuk\Courses\Concerns;
 
+use http\Exception;
 use YanDatsyuk\Courses\Core\RateType;
 use YanDatsyuk\Courses\Exceptions\IncorrectPriceValueException;
 use YanDatsyuk\Courses\Exceptions\UnknownRateTypeException;
@@ -70,7 +71,7 @@ trait IsLesson
     /**
      * @return mixed
      */
-    public function getPrice():float
+    public function getPrice(): float
     {
         return $this->price;
     }
@@ -82,7 +83,7 @@ trait IsLesson
     public function setPrice($price)
     {
         //price validation
-        if ($price < 0){
+        if ($price < 0) {
             throw new IncorrectPriceValueException();
         }
         $this->price = $price;
@@ -91,7 +92,7 @@ trait IsLesson
     /**
      * @return mixed
      */
-    public function getDuration():float
+    public function getDuration(): float
     {
         return $this->duration;
     }
@@ -103,7 +104,7 @@ trait IsLesson
     public function setDuration($duration)
     {
         //duration validation
-        if ($duration < 0){
+        if ($duration < 0) {
             throw new IncorrectPriceValueException();
         }
 

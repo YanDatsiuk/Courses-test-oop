@@ -1,13 +1,11 @@
 <?php
 
 namespace YanDatsyuk\Courses\Core;
-/**
- * Created by PhpStorm.
- * User: datsyuk
- * Date: 02.11.17
- * Time: 13:12
- */
 
+/**
+ * Class RateType
+ * @package YanDatsyuk\Courses\Core
+ */
 class RateType
 {
     public const FIXED = 'fixed';
