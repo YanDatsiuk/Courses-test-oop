@@ -9,5 +9,5 @@ namespace YanDatsyuk\Courses\Contracts;
  */
 interface RateType
 {
-    public function calculatePrice(Lesson $lesson):float;
+    public function calculatePrice(float $price, float $duration):float;
 }

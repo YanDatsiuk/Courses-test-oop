@@ -44,52 +44,7 @@ trait IsLesson
      */
     public function getTotalPrice(): float
     {
-        switch ($this->rateType) {
-            case RateType::FIXED:
-                return $this->_calculatePriceForFixedRate();
-                break;
-
-            case RateType::HOURLY:
-                return $this->_calculatePriceForHourlyRate();
-                break;
-
-            default:
-                throw new UnknownRateTypeException();
-        }
-    }
-
-    /**
-     * @return float
-     * @throws IncorrectPriceValueException
-     */
-    private function _calculatePriceForFixedRate(): float
-    {
-        //validate price
-        if (is_null($this->price) || ($this->price < 0)) {
-            throw new IncorrectPriceValueException();
-        }
-
-        return $this->price;
-    }
-
-    /**
-     * @return float
-     * @throws IncorrectDurationValueException
-     * @throws IncorrectPriceValueException
-     */
-    private function _calculatePriceForHourlyRate(): float
-    {
-        //validate price
-        if (is_null($this->price) || ($this->price < 0)) {
-            throw new IncorrectPriceValueException();
-        }
-
-        //validate duration
-        if (is_null($this->duration) || ($this->duration < 0)) {
-            throw new IncorrectDurationValueException();
-        }
-
-        return $this->price * $this->duration;
+        return $this->rateType->calculatePrice($this->price, $this->duration);
     }
 
     /**
@@ -136,15 +91,15 @@ trait IsLesson
     }
 
     /**
-     * @return string
+     * @return RateType
      */
-    public function getRateType(): string
+    public function getRateType(): RateType
     {
         return $this->rateType;
     }
 
     /**
-     * @param string $rateType
+     * @param RateType $rateType
      */
     public function setRateType(RateType $rateType)
     {
