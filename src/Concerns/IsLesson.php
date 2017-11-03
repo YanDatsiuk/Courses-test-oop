@@ -2,7 +2,7 @@
 
 namespace YanDatsyuk\Courses\Concerns;
 
-use YanDatsyuk\Courses\Core\RateType;
+use YanDatsyuk\Courses\Contracts\RateType;
 use YanDatsyuk\Courses\Exceptions\IncorrectDurationValueException;
 use YanDatsyuk\Courses\Exceptions\IncorrectPriceValueException;
 use YanDatsyuk\Courses\Exceptions\UnknownRateTypeException;
@@ -30,7 +30,7 @@ trait IsLesson
     /**
      * Rate type for a lesson.
      *
-     * @var $rateType string
+     * @var $rateType RateType
      */
     private $rateType;
 
@@ -146,7 +146,7 @@ trait IsLesson
     /**
      * @param string $rateType
      */
-    public function setRateType(string $rateType)
+    public function setRateType(RateType $rateType)
     {
         $this->rateType = $rateType;
     }

@@ -1,6 +1,6 @@
 <?php
 
-namespace YanDatsyuk\Courses\Core;
+namespace YanDatsyuk\Courses;
 
 /**
  * Class PriceCalculator

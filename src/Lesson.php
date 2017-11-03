@@ -1,6 +1,6 @@
 <?php
 
-namespace YanDatsyuk\Courses\Core;
+namespace YanDatsyuk\Courses;
 
 use YanDatsyuk\Courses\Concerns\IsLesson;
 use YanDatsyuk\Courses\Contracts\Lesson as ILesson;
@@ -16,7 +16,7 @@ abstract class Lesson implements ILesson
      * @param int $duration
      * @param string $rateType
      */
-    public function __construct($price = 0, $duration = 0, $rateType = RateType::FIXED)
+    public function __construct($price = 0, $duration = 0, $rateType = null)
     {
         $this->setPrice($price);
         $this->setDuration($duration);
