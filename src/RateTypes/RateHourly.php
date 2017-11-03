@@ -6,9 +6,19 @@ use YanDatsyuk\Courses\Contracts\RateType;
 use YanDatsyuk\Courses\Exceptions\IncorrectDurationValueException;
 use YanDatsyuk\Courses\Exceptions\IncorrectPriceValueException;
 
+/**
+ * Class RateHourly
+ * @package YanDatsyuk\Courses\RateTypes
+ */
 class RateHourly implements RateType
 {
-
+    /**
+     * @param float $price
+     * @param float $duration
+     * @return float
+     * @throws IncorrectDurationValueException
+     * @throws IncorrectPriceValueException
+     */
     public function calculatePrice(float $price, float $duration): float
     {
         //validate price

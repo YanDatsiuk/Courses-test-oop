@@ -6,6 +6,10 @@ use YanDatsyuk\Courses\Concerns\IsLesson;
 use YanDatsyuk\Courses\Contracts\Lesson as ILesson;
 use YanDatsyuk\Courses\Contracts\RateType;
 
+/**
+ * Class Lesson
+ * @package YanDatsyuk\Courses
+ */
 abstract class Lesson implements ILesson
 {
     use IsLesson;
