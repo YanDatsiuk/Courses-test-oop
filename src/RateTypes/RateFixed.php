@@ -25,6 +25,6 @@ class RateFixed implements RateType
             throw new IncorrectPriceValueException();
         }
 
-        return $this->price;
+        return $price;
     }
 }

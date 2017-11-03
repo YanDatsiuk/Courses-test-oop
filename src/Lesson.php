@@ -21,11 +21,13 @@ abstract class Lesson implements ILesson
      * @param int $duration
      * @param RateType $rateType
      */
-    public function __construct($price = 0, $duration = 0, $rateType = null)
+    public function __construct($price = 0, $duration = 0, RateType $rateType = null)
     {
         $this->setPrice($price);
         $this->setDuration($duration);
-        $this->setRateType($rateType);
+        if (!is_null($rateType)) {
+            $this->setRateType($rateType);
+        }
     }
 
     /**

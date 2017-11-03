@@ -34,9 +34,9 @@ interface Lesson
 
     /**
      * Getter and setter for a rate type
-     * @return string
+     * @return RateType
      */
-    public function getRateType(): string;
+    public function getRateType(): RateType;
 
-    public function setRateType(string $rateType);
+    public function setRateType(RateType $rateType);
 }
